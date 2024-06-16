@@ -29,7 +29,8 @@ const router = createBrowserRouter([
 ])
 
 function App() {
-  
+  const { authUser } = useSelector(store => store.app);
+  const dispatch = useDispatch();
 
   
 
