@@ -10,7 +10,15 @@ const Messages = () => {
   const [filterEmail, setFilterEmail] = useState(emails);
   const dispatch = useDispatch();
 
-  
+  useEffect(() => {
+    const q = query(collection(db, "emails"), orderBy('createdAt', 'desc'));
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const allEmails = snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      dispatch(setEmails(allEmails));
+    });
+ 
+    return () => unsubscribe(); // Cleanup function to unsubscribe when component unmounts
+  }, []);
 
   
 
