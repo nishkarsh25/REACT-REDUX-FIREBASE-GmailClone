@@ -14,9 +14,25 @@ const SendEmail = () => {
     const { open } = useSelector(store => store.app);
     const dispatch = useDispatch();
 
-    
+    const changeEventHandler = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value })
+    }
 
-    
+    const submitHandler = async (e) => {
+        e.preventDefault();
+        await addDoc(collection(db, "emails"), {
+            to: formData.recipients,
+            subject: formData.subject,
+            message: formData.message,
+            createdAt: serverTimestamp(),
+        })
+        dispatch(setOpen(false));
+        setFormData({
+            recipients: "",
+            subject: "",
+            message: ""
+        });
+    }
 
     
 }
