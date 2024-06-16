@@ -22,7 +22,14 @@ const Mail = () => {
   const navigate = useNavigate();
   const { selectedMail } = useSelector(store => store.app);
 
-  
+  const deleteMailById = async (id) => {
+    try {
+      await deleteDoc(doc(db, 'emails', id));
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
+  }
   
 }
 
