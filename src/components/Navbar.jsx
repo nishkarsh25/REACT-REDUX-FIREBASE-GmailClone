@@ -12,5 +12,16 @@ import { signOut } from 'firebase/auth';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
+const Navbar = () => {
+  const [search, setSearch] = useState("");
+  const [toggle, setToggle] = useState(false);
+  const dispatch = useDispatch();
+  const { authUser } = useSelector(store => store.app);
 
+  
+  
+
+
+  
+}
 
