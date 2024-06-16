@@ -18,7 +18,7 @@ This project is a web application designed to mimic the core functionalities of 
 
 ## Live Demo
 
-You can try out the live demo of the app [here](https://effortless-malabi-edaf53.netlify.app/).
+You can try out the live demo of the app [here](https://react-redux-firebase-gmailclone.onrender.com).
 
 ## Folder Structure
 
