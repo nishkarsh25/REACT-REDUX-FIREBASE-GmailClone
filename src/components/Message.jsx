@@ -14,5 +14,6 @@ const Message = ({ email }) => {
         navigate(`/mail/${email.id}`);
     }
     
+    
 }
 
