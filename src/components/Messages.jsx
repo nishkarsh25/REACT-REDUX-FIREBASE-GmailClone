@@ -20,7 +20,12 @@ const Messages = () => {
     return () => unsubscribe(); // Cleanup function to unsubscribe when component unmounts
   }, []);
 
-  
+  useEffect(() => {
+    const filteredEmail = emails?.filter((email) => {
+      return email.subject.toLowerCase().includes(searchText.toLowerCase()) || email.to.toLowerCase().includes(searchText.toLowerCase()) || email.message.toLowerCase().includes(searchText.toLowerCase())
+    });
+    setFilterEmail(filteredEmail);
+  }, [searchText, emails]);
 
   
 }
