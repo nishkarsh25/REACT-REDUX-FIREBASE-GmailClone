@@ -28,6 +28,12 @@ const appSlice = createSlice({
     }
 });
 
+export const {
+    setOpen,
+    setSelectedMail,
+    setSearchText,
+    setEmails,
+    setAuthUser
+} = appSlice.actions;
 
-
-
+export default appSlice.reducer;
