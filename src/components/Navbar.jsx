@@ -18,7 +18,13 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const { authUser } = useSelector(store => store.app);
 
-  
+  const signOutHandler = () => {
+    signOut(auth).then(() => {
+      dispatch(setAuthUser(null));
+    }).catch((error) => {
+      console.log(error);
+    });
+  }
   
 
 
