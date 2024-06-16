@@ -27,6 +27,13 @@ const Messages = () => {
     setFilterEmail(filteredEmail);
   }, [searchText, emails]);
 
-  
+  return (
+    <div>
+      {
+        filterEmail?.map((email) => <Message key={email.id} email={email} />)
+      }
+
+    </div>
+  )
 }
 
