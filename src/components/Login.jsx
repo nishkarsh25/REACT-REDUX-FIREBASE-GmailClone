@@ -5,5 +5,10 @@ import GoogleButton from 'react-google-button';
 import { useDispatch } from 'react-redux';
 import { setAuthUser } from '../redux/appSlice';
 
-
+const Login = () => {
+    
+    
+     
+    
+}
 
