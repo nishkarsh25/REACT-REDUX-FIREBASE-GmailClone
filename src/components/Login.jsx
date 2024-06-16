@@ -9,6 +9,20 @@ const Login = () => {
     
     const dispatch = useDispatch();
      
-    
+    const signInWithGoogle = async () => {
+        try {
+            const result = await signInWithPopup(auth, provider);
+            dispatch(setAuthUser({
+                displayName: result.user.displayName,
+                email: result.user.email,
+                photoURL: result.user.photoURL
+            }));
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    return (
+        
+    )
 }
 
