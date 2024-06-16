@@ -17,4 +17,12 @@ import { deleteDoc, doc } from 'firebase/firestore';
 import { db } from '../firebase';
 import { motion } from "framer-motion"
 
+const Mail = () => {
+  const params = useParams();
+  const navigate = useNavigate();
+  const { selectedMail } = useSelector(store => store.app);
+
+  
+  
+}
 
