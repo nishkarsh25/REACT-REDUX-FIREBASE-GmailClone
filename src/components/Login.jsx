@@ -7,7 +7,7 @@ import { setAuthUser } from '../redux/appSlice';
 
 const Login = () => {
     
-    
+    const dispatch = useDispatch();
      
     
 }
