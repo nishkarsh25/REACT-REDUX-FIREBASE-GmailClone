@@ -32,7 +32,17 @@ function App() {
   const { authUser } = useSelector(store => store.app);
   const dispatch = useDispatch();
 
-  
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        dispatch(setAuthUser({
+          displayName: user.displayName,
+          email: user.email,
+          photoURL: user.photoURL
+        }));
+      }
+    })
+  }, [])
 
   
 }
