@@ -6,5 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import { setSelectedMail } from '../redux/appSlice';
 import { motion } from 'framer-motion';
 
-
+const Message = ({ email }) => {
+    
+    
+}
 
