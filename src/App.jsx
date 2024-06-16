@@ -10,7 +10,23 @@ import { useEffect } from 'react';
 import { auth } from './firebase';
 import { setAuthUser } from './redux/appSlice';
 
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Body />,
+    children: [
+      {
+        path: "/",
+        element: <Inbox />
+      },
+      {
+        path: "/mail/:id",
+        element: <Mail />
+      },
 
+    ]
+  }
+])
 
 
 
