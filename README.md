@@ -8,7 +8,7 @@ This project is a web application designed to mimic the core functionalities of 
 
 
 ## Features
-- **Authentication**: Users can sign in using their Google accounts via Firebase authentication.
+- **Authentication**: Users can sign in using their Google accounts via Firebase  authentication.
 - **Inbox View**: Displays a list of emails fetched from Firebase Firestore, sorted by timestamp.
 - **Compose Email**: Allows users to compose and send emails, which are then stored in Firestore.
 - **View Email**: Clicking on an email in the inbox displays its details including subject, sender, and message body.
